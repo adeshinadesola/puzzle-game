@@ -1,54 +1,32 @@
-# platonica
+Platonica - A Puzzle Game with Platonic Solids
+Platonica is an engaging puzzle game featuring Platonic solids. Clone and solve the puzzles in your terminal while enjoying the challenge of geometric shapes.
 
-A game of puzzles with platonic solids
+Created By: Adeshina Adesola
+GitHub Profile: Adeshinadesola
 
-Created By:
-Alice Wong: https://github.com/9ae
-Jesse Lee: https://github.com/mienaikoe
+Running the Game
+To run the game successfully, follow these steps:
+* Ensure you have Python 3 installed. This game was developed with Python 3.10.7.
+* Navigate to the game directory in your terminal: bash
+* Install all the required dependencies using pip: bash
+* Start the game by running the following command: bash  
+Modifying the Game with Environment Variables
+You can "hack" the game by using environment variables to apply special modifiers. Here are the available modifiers:
 
-## Running the Game
+* SKIP_TUTORIAL=1: Launch the game with this variable to skip the tutorial when starting.
+* START_LEVEL=<number>: Begin the game at a specific level, bypassing all previous levels. Use a number to select the starting level:
+    * 0: Tetrahedron
+    * 1: Cube
+    * 2: Octahedron
+    * 3: Icosahedron
+    * 4: Dodecahedron
+* OVER_EASY=1: Activate this variable to start every puzzle in the solved state. To register a move, you'll need to rotate a face three times.
+* 
+Known Bugs
+While we've done our best to create a seamless gaming experience, there are a couple of known issues:
+* Clicking Bug: Occasionally, clicking on the screen may stop working. If this happens, try clicking out of the game window and then back into it. We've attempted to fix this issue without success, and it may be related to pygame on Mac.
+* Rotation Bug: Sometimes, the rotation feature may stop working. Although we suspect it's our bug, we couldn't reproduce it consistently to identify a solution. If this occurs, you'll need to exit the game and restart it to resolve the problem.
+* 
+Special Thanks
+We extend our gratitude to our dedicated playtesters who helped improve the game and make it more enjoyable for all players. Your feedback and support are greatly appreciated.
 
-- We're using Python 3 (This was built with Python 3.10.7)
-- move into the game directory `cd game`
-- pip install all of the requirements: `pip install -r requirements.txt`
-- to run the game, `python main.py`
-
-## "Hacking" the game with environment variables
-
-We use some environment variables to run with special game modifiers. These are listed as follows:
-
-- `SKIP_TUTORIAL=1` The game will skip the tutorial when launched
-- `START_LEVEL=<number>` The game will start at a certain level, bypassing all previous levels, depending on which number you use. 0: tetrahedron, 1: cube, 2: octahedron, 3: icosahedron, 4: dodecahedron
-- `OVER_EASY=1` Every puzzle will start out in the solved state. You'll have to rotate a face 3 times for this to register, however.
-
-## Known Bugs
-
-- Sometimes, clicking on the screen will stop working. To fix this, click out of the game window and back into it. We tried to fix this for several hours and nothing seemed to work. It could be a bug with pygame on mac?
-
-- Sometimes rotation will stop working. This is probably our bug, but we couldn't get it to happen often enough to figure out how to solve it. You'll have to quit the game and restart it to fix this.
-
-## Special Thanks
-
-Special thanks to our playtesters!
-
-- Percy Hsu
-- Denise Sison
-- Kevin Rejko
-- Alex Browne
-- Chase Moores
-
-### Resources used
-
-Big thanks to [Coder Space: Let's code 3D Engine in Python. OpenGL Pygame Tutorial](https://www.youtube.com/watch?v=eJDIsFJN4OQ&ab_channel=CoderSpace) for helping us get started
-
-**Shaders**
-
-[Blending Functions](https://github.com/jamieowen/glsl-blend) used for polyhedrons
-
-[Noise from Book of Shaders](https://thebookofshaders.com/edit.php#11/3d-snoise.frag) used for star in end scene
-
-[How to draw a sine wave](https://shader.how/to/draw-a-sine-wave/) used for skybox textures
-
-[Hypnotic ripples](https://www.shadertoy.com/view/ldX3zr) used for water skybox
-
-[Stars background](https://www.shadertoy.com/view/lsfGWH) used for last level skybox
